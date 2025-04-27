@@ -17,11 +17,8 @@ public class UserService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    public void registerUser(User user) {
+    public User registerUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        if (user.getRole() == null) {
-            user.setRole(Role.CUSTOMER);
-        }
-        userRepository.save(user);
+        return userRepository.save(user);
     }
 }

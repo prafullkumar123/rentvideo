@@ -8,7 +8,6 @@ public class RentvideoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RentvideoApplication.class, args);
-		System.out.println("Exit");
 	}
 
 }
